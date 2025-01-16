@@ -1,0 +1,36 @@
+{
+  "name": "vue2-sb-7-connections",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build --webpack-stats-json"
+  },
+  "resolutions": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "vue": "^2.7.7"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.20",
+    "@storybook/addon-interactions": "^7.6.20",
+    "@storybook/addon-links": "^7.6.20",
+    "@storybook/blocks": "^7.6.20",
+    "@storybook/cli": "^7.6.20",
+    "@storybook/test": "^7.6.20",
+    "@storybook/theming": "^7.6.20",
+    "@storybook/vue": "^7.6.20",
+    "@storybook/vue-webpack5": "^7.6.20",
+    "@vitejs/plugin-legacy": "^2.0.0",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "chromatic": "^11.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "^7.6.20",
+    "terser": "^5.14.2"
+  }
+}

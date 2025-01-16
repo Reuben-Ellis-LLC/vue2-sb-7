@@ -1,0 +1,37 @@
+name: Chromatic
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+      - name: install
+        run: npm ci
+      - uses: chromaui/action@latest
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          # projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: connections
+          exitOnceUploaded: true
+          onlyChanged: true
+          traceChanged: true
+          debug: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chromatic-build-artifacts-${{ github.run_id }}
+          path: |
+            **/build-storybook.log
