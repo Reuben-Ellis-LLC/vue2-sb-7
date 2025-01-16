@@ -1,3 +1,3 @@
-import MyPage from '../stories/Page.vue';
+import('../stories/Page.vue');
 
-export const Page = MyPage;
+export const Page = '../stories/Page.vue';
