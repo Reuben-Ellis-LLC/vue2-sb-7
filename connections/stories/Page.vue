@@ -92,13 +92,13 @@ export default {
 
   methods: {
     onLogin() {
-      this.user = { name: 'Jeff Doe' };
+      this.user = { name: 'John Doe' };
     },
     onLogout() {
       this.user = null;
     },
     onCreateAccount() {
-      this.user = { name: 'Jeff Doe' };
+      this.user = { name: 'John Doe' };
     },
   },
 };
