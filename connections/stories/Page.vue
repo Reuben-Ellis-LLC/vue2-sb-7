@@ -92,7 +92,7 @@ export default {
 
   methods: {
     onLogin() {
-      this.user = { name: 'Jake Doe' };
+      this.user = { name: 'Jose Doe' };
     },
     onLogout() {
       this.user = null;
