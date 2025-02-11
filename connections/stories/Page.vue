@@ -78,11 +78,12 @@
 <script>
 import './page.css';
 import MyHeader from './Header.vue';
+import Button from './Button.vue';
 
 export default {
   name: 'my-page',
 
-  components: { MyHeader },
+  components: { MyHeader, Button },
 
   data() {
     return {

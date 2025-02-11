@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -c connections/.storybook --webpack-stats-json"
   },
   "resolutions": {
     "react": "^18.3.1",
