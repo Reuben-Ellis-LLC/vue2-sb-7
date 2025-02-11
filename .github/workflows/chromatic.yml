@@ -25,7 +25,7 @@ jobs:
           onlyChanged: true
           traceChanged: true
           debug: true
-          workingDir: connections
+          # workingDir: connections
           storybookBaseDir: connections
           storybookConfigDir: .storybook
       - uses: actions/upload-artifact@v4
