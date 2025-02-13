@@ -19,7 +19,7 @@ jobs:
         run: npm ci
       - name: switch directories
         run: cd connections
-      - uses: chromaui/action@latest
+      - uses: chromaui/action-canary
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
