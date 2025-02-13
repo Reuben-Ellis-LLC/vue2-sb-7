@@ -13,6 +13,7 @@
     "react-dom": "^18.3.1"
   },
   "dependencies": {
+    "chromatic": "^11.26.0--canary.1156.13310039692.0",
     "vue": "^2.7.7"
   },
   "devDependencies": {
