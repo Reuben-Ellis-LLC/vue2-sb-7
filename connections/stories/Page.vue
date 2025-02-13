@@ -78,11 +78,12 @@
 <script>
 import './page.css';
 import MyHeader from './Header.vue';
+import Button from './Button.vue';
 
 export default {
   name: 'my-page',
 
-  components: { MyHeader },
+  components: { MyHeader, Button },
 
   data() {
     return {
@@ -92,13 +93,13 @@ export default {
 
   methods: {
     onLogin() {
-      this.user = { name: 'Josh Doe' };
+      this.user = { name: 'Jose Doe' };
     },
     onLogout() {
       this.user = null;
     },
     onCreateAccount() {
-      this.user = { name: 'Josh Doe' };
+      this.user = { name: 'John Doe' };
     },
   },
 };

@@ -1,5 +1,5 @@
 /** @type { import('@storybook/vue').Preview } */
-import MyPage from '../stories/Page.vue';
+import { Page } from '../client/index';
 
 const preview = {
   parameters: {
