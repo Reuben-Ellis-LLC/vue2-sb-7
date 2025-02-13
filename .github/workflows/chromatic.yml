@@ -17,15 +17,13 @@ jobs:
           node-version: lts/*
       - name: install
         run: npm ci
-      - name: switch directories
-        run: cd connections
       - uses: chromaui/action-canary@v11.25.3
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitOnceUploaded: true
           onlyChanged: true
-          traceChanged: true
+          traceChanged: 'expanded'
           debug: true
           workingDir: connections
           # storybookBaseDir: connections
