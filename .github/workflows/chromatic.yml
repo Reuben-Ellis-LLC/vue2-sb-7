@@ -1,9 +1,6 @@
 name: Chromatic
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 permissions:
   contents: read
@@ -20,15 +17,17 @@ jobs:
           node-version: lts/*
       - name: install
         run: npm ci
-      - uses: chromaui/action@latest
+      - uses: chromaui/action-canary@v11.25.4
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          workingDir: connections
           exitOnceUploaded: true
           onlyChanged: true
-          traceChanged: true
+          traceChanged: 'expanded'
           debug: true
+          workingDir: connections
+          # storybookBaseDir: connections
+          # storybookConfigDir: .storybook
       - uses: actions/upload-artifact@v4
         if: always()
         with:
