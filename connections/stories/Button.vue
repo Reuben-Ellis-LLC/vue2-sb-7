@@ -21,7 +21,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'large',
+      default: 'medium',
       validator: function (value) {
         return ['small', 'medium', 'large'].indexOf(value) !== -1;
       },
