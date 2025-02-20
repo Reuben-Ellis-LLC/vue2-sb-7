@@ -31,7 +31,7 @@
           >!</span
         >
         <my-button
-          size="medium"
+          size="small"
           @onClick="onLogout"
           label="Log out"
           v-if="user"
